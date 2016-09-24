@@ -4,7 +4,7 @@ import {connect} from 'cerebral-view-react'
 import Entry from './Entry'
 
 export default connect({
-    entries: 'app.entries',
+    entries: 'app.entries.*',
     visibility: 'app.visibility'
   },
   function Entries({visibility, entries}) {
