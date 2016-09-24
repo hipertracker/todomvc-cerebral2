@@ -8,6 +8,7 @@ import clearCompleted from './chains/clearCompleted'
 import toggleEntryCompleted from './chains/toggleEntryCompleted'
 import editingEntry from './chains/editingEntry'
 import updateEntry from './chains/updateEntry'
+import toggleAllCompleted from './chains/toggleAllCompleted'
 
 export default module => {
 
@@ -24,5 +25,6 @@ export default module => {
     toggleEntryCompleted,
     editingEntry,
     updateEntry,
+    toggleAllCompleted,
   })
 }

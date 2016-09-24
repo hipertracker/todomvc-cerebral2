@@ -1,14 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
 import {connect} from 'cerebral-view-react'
+import EditEntry from './EditEntry'
 
 export default connect({}, {
     deleteEntry: 'app.deleteEntry',
     toggleEntryCompleted: 'app.toggleEntryCompleted',
     editingEntry: 'app.editingEntry',
-    updateEntry: 'app.updateEntry',
   },
-  function Entry({todo, deleteEntry, toggleEntryCompleted, editingEntry, updateEntry}) {
+  function Entry({todo, deleteEntry, toggleEntryCompleted, editingEntry}) {
     const classList = classNames({
       completed: todo.completed,
       editing: todo.editing
@@ -31,21 +31,7 @@ export default connect({}, {
             onClick={() => deleteEntry({id: todo.id})}
           />
         </div>
-        <input
-          className="edit"
-          value={todo.description}
-          name="title"
-          id={`todo-${todo.id}`}
-          onChange={e => {
-            if (e.key === 'Enter') {
-              editingEntry({id: todo.id, editing: false})
-            } else {
-              updateEntry({id: todo.id, description: e.target.value})
-            }
-          }}
-          onBlur={() => editingEntry({id: todo.id, editing: false})}
-          onKeyPress={e => e.key === 'Enter' && editingEntry({id: todo.id, editing: false})}
-        />
+        <EditEntry todo={todo}/>
       </li>
     )
   }

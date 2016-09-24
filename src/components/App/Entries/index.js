@@ -6,8 +6,10 @@ import Entry from './Entry'
 export default connect({
     entries: 'app.entries.*',
     visibility: 'app.visibility'
+  }, {
+    toggleAllCompleted: 'app.toggleAllCompleted',
   },
-  function Entries({entries, visibility}) {
+  function Entries({entries, visibility, toggleAllCompleted}) {
     if (!entries.length) return null
 
     const cssVisibility = {
@@ -22,7 +24,7 @@ export default connect({
       })
       .map((todo, key) => <Entry key={key} todo={todo}/>)
       .value()
-    
+
     return (
       <section className="main" style={cssVisibility}>
         <input
@@ -30,7 +32,7 @@ export default connect({
           type="checkbox"
           name="toggle"
           checked={allCompleted}
-          onChange={() => console.log('@Entries input changed')}
+          onChange={() => toggleAllCompleted()}
         />
         <label htmlFor="toggle-all">
           Mark as complete

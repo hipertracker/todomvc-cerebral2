@@ -1,3 +1,11 @@
+import _ from 'lodash'
+
 export default function editingEntry({input, state}) {
-  state.set(`app.entries.${input.id - 1}.editing`, input.editing)
+  const {id, editing} = input
+  const entries = state.get('app.entries')
+  const newEntries = _.map(entries, entry => {
+    if (entry.id === id) return {...entry, editing}
+    return entry
+  })
+  state.set('app.entries', newEntries)
 }
