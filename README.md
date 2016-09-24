@@ -1,7 +1,7 @@
 This project is implementation of [TodoMVC](http://todomvc.com) in [Cerebral](http://cerebraljs.com) and [React](https://facebook.github.io/react/). To minimize configurations it uses [Create React App](https://github.com/facebookincubator/create-react-app).
 
 
-#### Install
+### Install
 
 ```
 git clone http://github.com/hipertracker/cerebral-react-totdomvc
