@@ -1,11 +1,11 @@
 import model from './model'
 
 import addEntry from './chains/addEntry'
+import deleteEntry from './chains/deleteEntry'
 import updateField from './chains/updateField'
 import changeVisibility from './chains/changeVisibility'
 import clearCompleted from './chains/clearCompleted'
-import deleteEntry from './chains/deleteEntry'
-import toggleTodoCompleted from './chains/toggleTodoCompleted'
+import toggleEntryCompleted from './chains/toggleEntryCompleted'
 
 export default module => {
 
@@ -15,10 +15,10 @@ export default module => {
 
   module.addSignals({
     addEntry,
+    deleteEntry,
     updateField,
     changeVisibility,
     clearCompleted,
-    deleteEntry,
-    toggleTodoCompleted,
+    toggleEntryCompleted,
   })
 }

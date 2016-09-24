@@ -4,9 +4,9 @@ import {connect} from 'cerebral-view-react'
 
 export default connect({}, {
     deleteEntry: 'app.deleteEntry',
-    toggleTodoCompleted: 'app.toggleTodoCompleted',
+    toggleEntryCompleted: 'app.toggleEntryCompleted',
   },
-  function Entry({todo, deleteEntry, toggleTodoCompleted}) {
+  function Entry({todo, deleteEntry, toggleEntryCompleted}) {
     const classList = classNames({
       completed: todo.completed,
       editing: todo.editing
@@ -19,7 +19,7 @@ export default connect({}, {
             className="toggle"
             type="checkbox"
             checked={todo.completed}
-            onClick={() => toggleTodoCompleted({id: todo.id})}
+            onClick={() => toggleEntryCompleted({id: todo.id})}
           />
           <label
             onDoubleClick={() => console.log('@Entry label doubleClicked')}
