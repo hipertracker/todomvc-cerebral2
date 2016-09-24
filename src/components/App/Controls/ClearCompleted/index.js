@@ -11,7 +11,7 @@ export default connect({}, {
         hidden={entriesCompleted === 0}
         onClick={() => clicked()}
       >
-        Clear completed
+        Clear completed ({entriesCompleted})
       </button>
     )
   }
