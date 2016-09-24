@@ -13,7 +13,7 @@ export default connect({
     const cssVisibility = {
       visibility: _.isEmpty(entries) ? 'hidden' : 'visible'
     }
-    const allCompleted = entries.filter(entry => entry.completed)
+    const allCompleted = entries.filter(entry => entry.completed).length
     const todos = _(entries)
       .filter(entry => {
         if (visibility === 'Completed') return entry.completed
@@ -22,7 +22,7 @@ export default connect({
       })
       .map((todo, key) => <Entry key={key} todo={todo}/>)
       .value()
-
+    
     return (
       <section className="main" style={cssVisibility}>
         <input

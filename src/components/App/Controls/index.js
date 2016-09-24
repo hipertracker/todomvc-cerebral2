@@ -6,7 +6,7 @@ import Filters from './Filters'
 
 export default connect({
     visibility: 'app.visibility',
-    entries: 'app.entries'
+    entries: 'app.entries.*'
   },
   function Controls({visibility, entries}) {
     if (!entries.length) return null
