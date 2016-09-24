@@ -21,7 +21,7 @@ export default connect({}, {
             className="toggle"
             type="checkbox"
             checked={todo.completed}
-            onClick={() => toggleEntryCompleted({id: todo.id})}
+            onChange={() => toggleEntryCompleted({id: todo.id})}
           />
           <label onDoubleClick={() => editingEntry({id: todo.id, editing: true})}>
             {todo.description}
