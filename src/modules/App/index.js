@@ -6,6 +6,8 @@ import updateField from './chains/updateField'
 import changeVisibility from './chains/changeVisibility'
 import clearCompleted from './chains/clearCompleted'
 import toggleEntryCompleted from './chains/toggleEntryCompleted'
+import editingEntry from './chains/editingEntry'
+import updateEntry from './chains/updateEntry'
 
 export default module => {
 
@@ -20,5 +22,7 @@ export default module => {
     changeVisibility,
     clearCompleted,
     toggleEntryCompleted,
+    editingEntry,
+    updateEntry,
   })
 }

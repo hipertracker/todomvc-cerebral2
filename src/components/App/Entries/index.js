@@ -7,13 +7,13 @@ export default connect({
     entries: 'app.entries.*',
     visibility: 'app.visibility'
   },
-  function Entries({visibility, entries}) {
+  function Entries({entries, visibility}) {
     if (!entries.length) return null
 
     const cssVisibility = {
       visibility: _.isEmpty(entries) ? 'hidden' : 'visible'
     }
-    const allCompleted = entries.filter(entry => entry.completed).length
+    const allCompleted = _.filter(entries, entry => entry.completed).length
     const todos = _(entries)
       .filter(entry => {
         if (visibility === 'Completed') return entry.completed
