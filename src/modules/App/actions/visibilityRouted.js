@@ -1,4 +1,5 @@
 // import redirect from 'cerebral-module-router/redirect'
+// import redirectToSignal from 'cerebral-module-router/redirectToSignal'
 
 export default function visibilityRouted({input, state}) {
   switch (input.visibility) {
@@ -11,7 +12,8 @@ export default function visibilityRouted({input, state}) {
     default:
       state.set('app.visibility', 'All')
       // redirect('/') // it does not work :(
-      document.location = '/#/'
+      // redirectToSignal('app.visibilityRouted', {visibility: ''}) // also does not work :(
+      document.location = '/#/' // only this works
 
   }
 }
