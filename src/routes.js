@@ -2,7 +2,7 @@ import Router from 'cerebral-module-router'
 
 export default Router({
   '/': 'app.rootRouted',
-  '/:filter': 'app.filterClicked',
+  '/:visibility': 'app.visibilityRouted',
 }, {
   onlyHash: true
 })

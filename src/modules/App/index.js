@@ -9,6 +9,8 @@ import toggleEntryCompleted from './chains/toggleEntryCompleted'
 import editingEntry from './chains/editingEntry'
 import updateEntry from './chains/updateEntry'
 import toggleAllCompleted from './chains/toggleAllCompleted'
+import visibilityRouted from './chains/visibilityRouted'
+import rootRouted from './chains/rootRouted'
 
 export default module => {
 
@@ -26,5 +28,7 @@ export default module => {
     editingEntry,
     updateEntry,
     toggleAllCompleted,
+    visibilityRouted,
+    rootRouted,
   })
 }

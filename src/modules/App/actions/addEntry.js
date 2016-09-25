@@ -9,5 +9,4 @@ export default function addEntry({state}) {
   state.set('app.entries', state.get('app.entries').concat(newEntry))
   state.set('app.uid', id)
   state.set('app.field', '')
-
 }

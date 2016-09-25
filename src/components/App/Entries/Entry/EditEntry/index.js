@@ -23,7 +23,7 @@ export default connect({}, {
           onChange={e => {
             if (e.key === 'Enter') {
               editingEntry({id: todo.id, editing: false})
-            } else {
+            } else if (e.target.value.trim()) {
               updateEntry({id: todo.id, description: e.target.value})
             }
           }}
