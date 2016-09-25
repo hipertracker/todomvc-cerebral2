@@ -1,3 +1,5 @@
+// import redirect from 'cerebral-module-router/redirect'
+
 export default function visibilityRouted({input, state}) {
   switch (input.visibility) {
     case 'active':
@@ -8,6 +10,8 @@ export default function visibilityRouted({input, state}) {
       break
     default:
       state.set('app.visibility', 'All')
+      // redirect('/') // it does not work :(
       document.location = '/#/'
+
   }
 }
