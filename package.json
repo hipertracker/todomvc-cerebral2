@@ -1,21 +1,19 @@
 {
-  "name": "cerebral-react",
-  "version": "1.1.0",
+  "name": "todomvc-cerebral2",
+  "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.6.1"
+    "react-scripts": "0.8.4"
   },
   "dependencies": {
-    "cerebral": "^1.1.0",
-    "cerebral-module-devtools": "^0.7.2",
-    "cerebral-module-router": "^0.17.1",
-    "cerebral-view-react": "^0.12.12",
+    "cerebral": "next",
+    "cerebral-router": "next",
     "classnames": "^2.2.5",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "function-tree": "next",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
     "todomvc-app-css": "^2.0.6",
-    "todomvc-common": "^1.0.2",
-    "uuid": "^2.0.3"
+    "todomvc-common": "^1.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

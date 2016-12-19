@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import {connect} from 'cerebral-view-react'
+import {connect} from 'cerebral/react'
 import EditEntry from './EditEntry'
 
 export default connect({}, {

@@ -1,5 +1,5 @@
-import {set} from 'cerebral/operators'
+import {set, state} from 'cerebral/operators'
 
 export default [
-  set('state:visibility', 'All')
+  set(state`visibility`, 'All')
 ]

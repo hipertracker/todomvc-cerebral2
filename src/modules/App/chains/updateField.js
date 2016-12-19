@@ -1,5 +1,5 @@
-import {copy} from 'cerebral/operators'
+import {input, set, state} from 'cerebral/operators'
 
 export default [
-  copy('input:field', 'state:app.field')
+  set(state`app.field`, input`field`)
 ]

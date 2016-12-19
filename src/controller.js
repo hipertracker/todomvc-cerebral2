@@ -1,15 +1,17 @@
 import {Controller} from 'cerebral'
-import Model from 'cerebral/models/mutable'
-import DevTools from 'cerebral-module-devtools'
-import App from './modules/App'
-import router from './routes'
+import Devtools from 'cerebral/devtools'
+import router from './router'
+// import http from './providers/http'
+// import cache from './providers/cache'
+import app from './modules/App'
 
-const controller = Controller(Model({}))
-
-controller.addModules({
-  app: App,
-  devtools: DevTools(),
-  router
+export default Controller({
+  options: {
+    strictRender: true,
+  },
+  devtools: Devtools(),
+  router,
+  modules: {
+    app
+  }
 })
-
-export default controller

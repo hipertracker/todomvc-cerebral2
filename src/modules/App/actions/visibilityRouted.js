@@ -1,4 +1,4 @@
-export default function visibilityRouted({input, services, state}) {
+export default function visibilityRouted({input, router, state}) {
   switch (input.visibility) {
     case 'active':
       state.set('app.visibility', 'Active')
@@ -8,6 +8,6 @@ export default function visibilityRouted({input, services, state}) {
       break
     default:
       state.set('app.visibility', 'All')
-      services.router.redirect('/')
+      router.redirect('/')
   }
 }
