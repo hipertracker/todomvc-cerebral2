@@ -1,12 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
 import {connect} from 'cerebral/react'
+import {signal} from 'cerebral/tags'
+
 import EditEntry from './EditEntry'
 
-export default connect({}, {
-    deleteEntry: 'app.deleteEntry',
-    toggleEntryCompleted: 'app.toggleEntryCompleted',
-    editingEntry: 'app.editingEntry',
+export default connect({
+    deleteEntry: signal`app.deleteEntry`,
+    toggleEntryCompleted: signal`app.toggleEntryCompleted`,
+    editingEntry: signal`app.editingEntry`,
   },
   function Entry({todo, deleteEntry, toggleEntryCompleted, editingEntry}) {
     const classList = classNames({

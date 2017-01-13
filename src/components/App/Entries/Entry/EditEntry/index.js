@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import {connect} from 'cerebral/react'
+import {signal} from 'cerebral/tags'
 
-export default connect({}, {
-    editingEntry: 'app.editingEntry',
-    updateEntry: 'app.updateEntry',
+export default connect({
+    editingEntry: signal`app.editingEntry`,
+    updateEntry: signal`app.updateEntry`,
   },
   class EditEntry extends Component {
     componentDidUpdate (prevProps) {

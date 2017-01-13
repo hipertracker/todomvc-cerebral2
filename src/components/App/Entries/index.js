@@ -1,13 +1,13 @@
 import _ from 'lodash'
 import React from 'react'
 import {connect} from 'cerebral/react'
+import {signal, state} from 'cerebral/tags'
 import Entry from './Entry'
 
 export default connect({
-    entries: 'app.entries.*',
-    visibility: 'app.visibility'
-  }, {
-    toggleAllCompleted: 'app.toggleAllCompleted',
+    entries: state`app.entries.*`,
+    visibility: state`app.visibility`,
+    toggleAllCompleted: signal`app.toggleAllCompleted`,
   },
   function Entries({entries, visibility, toggleAllCompleted}) {
     if (!entries.length) return null

@@ -1,8 +1,9 @@
 import React from 'react'
 import {connect} from 'cerebral/react'
+import {signal} from 'cerebral/tags'
 
-export default connect({}, {
-    clicked: 'app.clearCompleted'
+export default connect({
+    clicked: signal`app.clearCompleted`
   },
   function ClearCompleted({entriesCompleted, clicked}) {
     return (

@@ -11,4 +11,4 @@ import App from './components/App'
 render(
   <Container controller={controller}>
     <App/>
-  </Container>, document.querySelector('#root'))
+  </Container>, document.querySelector('#app'))

@@ -1,5 +1,6 @@
-import {input, set, state} from 'cerebral/operators'
+import {input, state} from 'cerebral/tags'
+import {set} from 'cerebral/operators'
 
 export default [
-  set(state`app.visibility`, input`visibility`)
+    set(state`app.visibility`, input`visibility`)
 ]

@@ -1,11 +1,11 @@
 import React from 'react'
 import {connect} from 'cerebral/react'
+import {signal, state} from 'cerebral/tags'
 
 export default connect({
-    field: 'app.field',
-  }, {
-    updateField: 'app.updateField',
-    addEntry: 'app.addEntry'
+    field: state`app.field`,
+    updateField: signal`app.updateField`,
+    addEntry: signal`app.addEntry`
   },
   function ViewInput({field, updateField, addEntry}) {
     return (
