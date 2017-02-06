@@ -17,7 +17,7 @@ export default connect({
           autoFocus
           value={field}
           onChange={e => updateField({field: e.target.value})}
-          onKeyPress={e => e.key === 'Enter' && e.target.value.trim() && addEntry()}
+          onKeyPress={e => e.key === 'Enter' && e.target.value.trim() && addEntry(e.target.value)}
         />
       </header>
     )
