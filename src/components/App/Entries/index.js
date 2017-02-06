@@ -5,12 +5,14 @@ import {signal, state} from 'cerebral/tags'
 import Entry from './Entry'
 
 export default connect({
-    entries: state`app.entries.*`,
+    entries: state`app.entries`,
     visibility: state`app.visibility`,
     toggleAllCompleted: signal`app.toggleAllCompleted`,
   },
   function Entries({entries, visibility, toggleAllCompleted}) {
-    if (!entries.length) return null
+    if (!entries.length) {
+        return null
+    }
 
     const cssVisibility = {
       visibility: _.isEmpty(entries) ? 'hidden' : 'visible'
