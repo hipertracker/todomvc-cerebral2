@@ -1,5 +1,5 @@
-export default function visibilityRouted({input, router, state}) {
-  switch (input.visibility) {
+export default function visibilityRouted({props, router, state}) {
+  switch (props.visibility) {
     case 'active':
       state.set('app.visibility', 'Active')
       break

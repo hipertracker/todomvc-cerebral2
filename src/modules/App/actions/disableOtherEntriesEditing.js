@@ -1,7 +1,7 @@
 import _ from 'lodash'
 
-export default function disableOtherEntriesEditing({input, state}) {
-  const {id} = input
+export default function disableOtherEntriesEditing({props, state}) {
+  const {id} = props
   const entries = state.get('app.entries')
   const newEntries = _.map(entries, entry => {
     if (entry.id !== id) return {...entry, editing: false}
